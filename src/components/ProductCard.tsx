@@ -10,8 +10,8 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
         alt={product.name}
         className="h-[250px] w-[115px] object-cover"
       />
-      <div className="flex w-full justify-between">
-        <h3>{product.name}</h3>
+      <div className="flex w-full justify-between items-center">
+        <h3 className="font-bold">{product.name}</h3>
         <Link
           to={`/product/${product.id}`}
           className="bg-grey rounded-[6px] px-[24px] py-[12px] text-white hover:bg-grey-2 transition-all duration-300"
