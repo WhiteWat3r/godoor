@@ -38,7 +38,7 @@ export const Home = () => {
         <SectionTitle text={"Категории"} />
 
         <div className="flex w-full gap-[20px]">
-          <div className="bg-grey flex w-[50%] justify-between rounded-[6px] px-[50px]">
+          <div className="flex w-[50%] justify-between rounded-[6px] bg-grey px-[50px]">
             <div className="flex flex-col items-start py-[97px] text-white">
               <h4 className="title-1 max-w-[400px]">Межкомнатные двери</h4>
               <Link
@@ -62,9 +62,46 @@ export const Home = () => {
         <SectionTitle text={"Популярные модели"} />
         <ul className="grid grid-cols-4 gap-[20px]">
           {doorModels.map((model) => (
-            <ProductCard product={model} key={model.id}/>
+            <ProductCard product={model} key={model.id} />
           ))}
         </ul>
+      </section>
+      <section className="rounded-[6px] bg-[#3A3A3A] text-white">
+        <div className="m-7">
+          <h3 className="title-1">
+            Будут вопросы - звоните +7 (950) 341-31-16
+          </h3>
+          <p className="text-lg">
+            Хотите перезвоним вам? Тогда отправьте ваш номер телефона.
+          </p>
+          <form action="submit" className="mt-10">
+            <div className="flex space-x-4">
+              <div className="flex-1">
+                <label htmlFor="name">Имя:</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Ваше имя:"
+                  className="text-m w-full rounded-[6px] p-[7px] text-black"
+                  required
+                />
+              </div>
+              <div className="flex-1">
+                <label htmlFor="tel">Номер телефона:</label>
+                <input
+                  id="tel"
+                  type="tel"
+                  placeholder="+7 (___) ___ - __ - __"
+                  className="text-m w-full rounded-[6px] p-[7px] text-black"
+                  required
+                />
+              </div>
+            </div>
+            <button className="mt-4 w-full rounded-[6px] bg-[#4F4F4F] p-[6px] transition-all duration-300 hover:bg-[#727272]">
+              Отправить
+            </button>
+          </form>
+        </div>
       </section>
     </>
   );
