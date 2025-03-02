@@ -14,6 +14,7 @@ import door5 from "@/assets/images/doors/door5.png";
 import door6 from "@/assets/images/doors/door6.png";
 import door7 from "@/assets/images/doors/door7.png";
 import { CategoriesCard } from "@/components/CategoriesCard";
+import { ContactForm } from "@/components/ContactForm";
 
 const doorModels: IProduct[] = [
   { id: 1, name: "М 118 Э", img: door },
@@ -23,7 +24,6 @@ const doorModels: IProduct[] = [
   { id: 5, name: "М 118 Э", img: door4 },
   { id: 6, name: "М 118 Э", img: door5 },
   { id: 7, name: "М 118 Э", img: door6 },
-
   { id: 8, name: "М 118 Э", img: door7 },
 ];
 
@@ -74,33 +74,7 @@ export const Home = () => {
           <p className="text-lg">
             Хотите перезвоним вам? Тогда отправьте ваш номер телефона.
           </p>
-          <form action="submit" className="mt-10">
-            <div className="flex space-x-4">
-              <div className="flex-1">
-                <label htmlFor="name">Имя:</label>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Ваше имя:"
-                  className="text-m w-full rounded-[6px] p-[7px] text-black"
-                  required
-                />
-              </div>
-              <div className="flex-1">
-                <label htmlFor="tel">Номер телефона:</label>
-                <input
-                  id="tel"
-                  type="tel"
-                  placeholder="+7 (___) ___ - __ - __"
-                  className="text-m w-full rounded-[6px] p-[7px] text-black"
-                  required
-                />
-              </div>
-            </div>
-            <button className="mt-4 w-full rounded-[6px] bg-[#4F4F4F] p-[6px] transition-all duration-300 hover:bg-[#727272]">
-              Отправить
-            </button>
-          </form>
+         <ContactForm />
         </div>
       </section>
     </>
