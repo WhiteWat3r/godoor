@@ -13,8 +13,17 @@ import door4 from "@/assets/images/doors/door4.png";
 import door5 from "@/assets/images/doors/door5.png";
 import door6 from "@/assets/images/doors/door6.png";
 import door7 from "@/assets/images/doors/door7.png";
+import collection1 from "@/assets/images/doors/collection/Link1.png";
+import collection2 from "@/assets/images/doors/collection/Link2.png";
+import collection3 from "@/assets/images/doors/collection/Link3.png";
+import collection4 from "@/assets/images/doors/collection/Link4.png";
+import collection5 from "@/assets/images/doors/collection/Link5.png";
+import collection6 from "@/assets/images/doors/collection/Link6.png";
+import collection7 from "@/assets/images/doors/collection/Link7.png";
+import collection8 from "@/assets/images/doors/collection/Link8.png";
 import { CategoriesCard } from "@/components/CategoriesCard";
 import { ContactForm } from "@/components/ContactForm";
+import { CollectionCard } from "@/components/CollectionCard";
 
 const doorModels: IProduct[] = [
   { id: 1, name: "М 118 Э", img: door },
@@ -25,6 +34,17 @@ const doorModels: IProduct[] = [
   { id: 6, name: "М 118 Э", img: door5 },
   { id: 7, name: "М 118 Э", img: door6 },
   { id: 8, name: "М 118 Э", img: door7 },
+];
+
+const collections: IProduct[] = [
+  { id: 1, name: "Входные двери недорого", img: collection1 },
+  { id: 2, name: "Двери в дом", img: collection2 },
+  { id: 3, name: "Входная дверь в квартиру купить", img: collection3 },
+  { id: 4, name: "Входные двери с зеркалом", img: collection4 },
+  { id: 5, name: "Двери в квартиру", img: collection5 },
+  { id: 6, name: "Входная дверь со стеклом", img: collection6 },
+  { id: 7, name: "Входные двери со стеклом", img: collection7 },
+  { id: 8, name: "Двери входные металлические", img: collection8 },
 ];
 
 export const Home = () => {
@@ -72,10 +92,18 @@ export const Home = () => {
             Будут вопросы - звоните +7 (950) 341-31-16
           </h3>
           <p className="text-lg">
-            Хотите перезвоним вам? Тогда отправьте ваш номер телефона.
+            Хотите перезвоним Вам? Тогда отправьте ваш номер телефона.
           </p>
-         <ContactForm />
+          <ContactForm />
         </div>
+      </section>
+      <section>
+        <SectionTitle text={"Подборка дверей"} />
+        <ul className="grid grid-cols-4 gap-[20px]">
+          {collections.map((collection) => (
+            <CollectionCard collection={collection} key={collection.id} />
+          ))}
+        </ul>
       </section>
     </>
   );
