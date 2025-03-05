@@ -104,6 +104,12 @@ export const Home = () => {
             <CollectionCard collection={collection} key={collection.id} />
           ))}
         </ul>
+        <Link
+          to={`/`} //ссылка на подобрки
+          className="mx-auto mb-4 mt-8 block w-full max-w-[250px] rounded-[6px] bg-[#67381A] py-[15px] text-center font-bold text-white transition-all duration-300 hover:bg-[#ba5c22]"
+        >
+          Загрузить больше
+        </Link>
       </section>
     </>
   );
