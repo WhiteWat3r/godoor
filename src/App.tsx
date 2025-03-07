@@ -14,19 +14,20 @@ function App() {
 
   return (
     <Router>
-      <Header />
-      <main className="mx-auto my-0 flex w-full max-w-[1440px] flex-col gap-[100px] px-[40px]">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/catalog" element={<Catalog />} />
-          {/* <Route path="/products" element={<Products />} /> */}
-          <Route path="/product/:productId" element={<Product />} />
-
-          <Route path="*" element={<InProgress />} />
-        </Routes>
-      </main>
-      <Footer />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="mx-auto my-0 flex w-full max-w-[1440px] flex-1 flex-col gap-[100px] px-[40px]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/catalog" element={<Catalog />} />
+            {/* <Route path="/products" element={<Products />} /> */}
+            <Route path="/product/:productId" element={<Product />} />
+            <Route path="*" element={<InProgress />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
