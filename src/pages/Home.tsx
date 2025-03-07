@@ -97,7 +97,7 @@ export const Home = () => {
           <ContactForm />
         </div>
       </section>
-      <section>
+      <section className="mb-[200px]">
         <SectionTitle text={"Подборка дверей"} />
         <ul className="grid grid-cols-4 gap-[20px]">
           {collections.map((collection) => (
