@@ -1,0 +1,82 @@
+/* Контейнер для слайдера */
+.product-swiper-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 30px; /* Место для пагинации */
+}
+
+/* Стили для кастомных стрелок навигации */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стрелка влево */
+.swiper-button-prev-custom {
+  left: -5px;
+}
+
+/* Стрелка вправо */
+.swiper-button-next-custom {
+  right: -5px;
+}
+
+/* Кастомная пагинация */
+.custom-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+/* Кастомные точки */
+.custom-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Активная точка */
+.custom-bullet-active {
+  background-color: #67381a;
+  width: 12px;
+  height: 12px;
+}
+
+/* Убираем стандартные стрелки Swiper */
+.product-swiper .swiper-button-prev,
+.product-swiper .swiper-button-next {
+  display: none;
+}
+
+/* Убираем стандартную пагинацию Swiper */
+.product-swiper .swiper-pagination {
+  display: none;
+}
+
+/* Стили для неактивных стрелок */
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
+/* Стили для точек при наведении */
+.custom-bullet:hover {
+  background-color: #ba5c22;
+}
+
+

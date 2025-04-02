@@ -3,7 +3,7 @@ import preview from "@/assets/images/doors/preview.png";
 import { Link } from "react-router-dom";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { IProduct } from "@/utils/types";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard } from "@/components/ProductCard/ProductCard";
 
 import door from "@/assets/images/doors/main-door.png";
 import door1 from "@/assets/images/doors/door1.png";
@@ -24,6 +24,7 @@ import collection8 from "@/assets/images/doors/collection/Link8.png";
 import { CategoriesCard } from "@/components/CategoriesCard";
 import { ContactForm } from "@/components/ContactForm";
 import { CollectionCard } from "@/components/CollectionCard";
+import { entranceDoors } from "@/utils/constants";
 
 const doorModels: IProduct[] = [
   { id: 1, name: "М 118 Э", img: door },
@@ -81,7 +82,7 @@ export const Home = () => {
       <section>
         <SectionTitle text={"Популярные модели"} />
         <ul className="grid grid-cols-4 gap-[20px]">
-          {doorModels.map((model) => (
+          {entranceDoors.slice(0, 8).map((model) => (
             <ProductCard product={model} key={model.id} />
           ))}
         </ul>
